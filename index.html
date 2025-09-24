@@ -1,123 +1,65 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Interaktif</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Portofolio Saya</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Header -->
-    <header class="header">
-        <nav class="container nav">
-            <h1 class="logo">Portofolio</h1>
-            <div class="nav-links">
-                <a href="#about" class="nav-link">Tentang</a>
-                <a href="#projects" class="nav-link">Proyek</a>
-                <a href="#skills" class="nav-link">Keahlian</a>
-                <a href="#contact" class="nav-link">Kontak</a>
-            </div>
-            <button id="menu-btn" class="menu-btn">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </nav>
-        <div id="mobile-menu" class="mobile-menu">
-            <a href="#about" class="mobile-nav-link">Tentang</a>
-            <a href="#projects" class="mobile-nav-link">Proyek</a>
-            <a href="#skills" class="mobile-nav-link">Keahlian</a>
-            <a href="#contact" class="mobile-nav-link">Kontak</a>
+    <header>
+        <div class="container">
+            <h1>Nama Kamu</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">Tentang</a></li>
+                    <li><a href="#projects">Proyek</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <main>
-        <!-- About Section -->
-        <section id="about" class="section about-section">
-            <div class="container text-center">
-                <div class="profile">
-                    <img src="https://placehold.co/200x200/a78bfa/ffffff?text=Foto+Anda" alt="Foto Profil" class="profile-pic">
-                    <h2 class="name">Nama Anda</h2>
-                    <p class="title">[Jabatan/Profesi Anda]</p>
-                    <p class="description">
-                        Ceritakan sedikit tentang diri Anda, latar belakang Anda, dan apa yang membuat Anda bersemangat. Ini adalah tempat yang bagus untuk menjelaskan keahlian dan tujuan profesional Anda.
-                    </p>
-                </div>
-            </div>
-        </section>
-       
-        <!-- Projects Section -->
-        <section id="projects" class="section projects-section">
-            <div class="container">
-                <h2 class="section-title">Proyek Pilihan</h2>
-                <div class="projects-grid">
-                    <div class="card">
-                        <img src="https://placehold.co/600x400/818cf8/ffffff?text=Proyek+1" alt="Proyek 1" class="project-img">
-                        <h3 class="card-title">Nama Proyek 1</h3>
-                        <p class="card-description">Deskripsi singkat tentang proyek ini. Jelaskan peran Anda dan teknologi yang digunakan.</p>
-                        <a href="#" class="btn-primary">Lihat Detail</a>
-                    </div>
-                    <div class="card">
-                        <img src="https://placehold.co/600x400/a78bfa/ffffff?text=Proyek+2" alt="Proyek 2" class="project-img">
-                        <h3 class="card-title">Nama Proyek 2</h3>
-                        <p class="card-description">Deskripsi singkat tentang proyek ini. Jelaskan peran Anda dan teknologi yang digunakan.</p>
-                        <a href="#" class="btn-primary">Lihat Detail</a>
-                    </div>
-                    <div class="card">
-                        <img src="https://placehold.co/600x400/6366f1/ffffff?text=Proyek+3" alt="Proyek 3" class="project-img">
-                        <h3 class="card-title">Nama Proyek 3</h3>
-                        <p class="card-description">Deskripsi singkat tentang proyek ini. Jelaskan peran Anda dan teknologi yang digunakan.</p>
-                        <a href="#" class="btn-primary">Lihat Detail</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>Tentang Saya</h2>
+            <img src="foto_profil.jpg" alt="Foto Profil" class="profile-photo">
+            <p>Halo! Saya adalah seorang [Profesi Kamu], dengan keahlian di bidang [Keahlian 1], [Keahlian 2], dan [Keahlian 3]. Saya suka sekali [Hobi/Aktivitas yang Kamu Suka].</p>
+        </div>
+    </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="section skills-section">
-            <div class="container">
-                <h2 class="section-title">Keahlian Saya</h2>
-                <div class="skills-grid">
-                    <div class="skill-tag bg-purple-200 text-purple-800">HTML</div>
-                    <div class="skill-tag bg-blue-200 text-blue-800">CSS</div>
-                    <div class="skill-tag bg-indigo-200 text-indigo-800">JavaScript</div>
-                    <div class="skill-tag bg-teal-200 text-teal-800">UI/UX Design</div>
-                    <!-- Tambahkan keahlian lain di sini -->
-                </div>
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2>Proyek</h2>
+            <div class="project-card">
+                <h3>Nama Proyek 1</h3>
+                <p>Deskripsi singkat tentang proyek ini. Jelaskan teknologi yang digunakan dan apa hasilnya.</p>
+                <a href="link_ke_proyek_1.html" target="_blank">Lihat Proyek</a>
             </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section contact-section">
-            <div class="container text-center">
-                <h2 class="section-title">Tertarik Bekerja Sama?</h2>
-                <p class="contact-sub">Anda bisa menghubungi saya melalui informasi di bawah ini.</p>
-               
-                <div class="contact-info-grid">
-                    <div class="contact-item">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7334 12.45 13.8 11.65L20 7.00005M19 18.0001H5C3.89543 18.0001 3 17.1046 3 16.0001V8.00005C3 6.89548 3.89543 6.00005 5 6.00005H19C20.1046 6.00005 21 6.89548 21 8.00005V16.0001C21 17.1046 20.1046 18.0001 19 18.0001Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <a href="mailto:emailanda@example.com" class="contact-link">emailanda@example.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 15C21 15.3188 20.916 15.6315 20.7597 15.9038C20.6034 16.1761 20.3687 16.4001 20.1 16.575L17.5 18.575C16.92 19.025 16.425 19.3417 15.8 19.585C15.175 19.8283 14.525 20 13.85 20C13.175 20 12.525 19.8283 11.9 19.585C11.275 19.3417 10.78 19.025 10.2 18.575L8 16.7L4 12.7L2.5 10.975C2.175 10.65 2.01667 10.25 2 9.775V8C2 7.425 2.175 6.925 2.5 6.425C2.825 5.925 3.16667 5.61667 3.525 5.5L7.5 4.5C8.075 4.325 8.7 4.55 9.35 5.2C10 5.85 10.45 6.5 10.7 7.2L12 9.5C12.1 9.7 12.2 9.9 12.3 10.1C12.4 10.3 12.5 10.5 12.6 10.7L11.5 12.5L12 13C12.5 13.5 13 14 13.5 14.5L14.5 13.5L16.3 12.5C16.5 12.6 16.7 12.7 16.9 12.8C17.1 12.9 17.3 13 17.5 13.1L19.8 14.4C20.45 15.1 20.675 15.725 20.5 16.3L19.5 20.3C19.325 20.925 19.0083 21.275 18.5 21.5C18 21.725 17.5 21.825 17 21.7C16.5 21.575 16.025 21.325 15.5 21.075L13.5 19.575" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <a href="tel:+628123456789" class="contact-link">+62 812-3456-789</a>
-                    </div>
-                    <div class="contact-item">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.0001C15.5539 18.0001 19 15.3334 19 10.2001C19 6.22552 15.866 3.00009 12 3.00009C8.13401 3.00009 5 6.22552 5 10.2001C5 15.3334 8.44607 18.0001 12 21.0001Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 11.0001C13.1046 11.0001 14 10.1046 14 10.0001C14 8.89552 13.1046 8.00009 12 8.00009C10.8954 8.00009 10 8.89552 10 10.0001C10 11.1046 10.8954 11.0001 12 11.0001Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <span class="contact-text">Jalan Contoh No. 123, Kota Anda</span>
-                    </div>
-                </div>
-
-                <a href="mailto:emailanda@example.com" class="btn-primary">Hubungi Saya</a>
+            <div class="project-card">
+                <h3>Nama Proyek 2</h3>
+                <p>Deskripsi singkat tentang proyek ini. Jelaskan teknologi yang digunakan dan apa hasilnya.</p>
+                <a href="link_ke_proyek_2.html" target="_blank">Lihat Proyek</a>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 Nama Anda. Dibuat dengan &hearts;.</p>
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Kontak</h2>
+            <p>Kamu bisa menghubungi saya melalui:</p>
+            <ul>
+                <li>Email: <a href="mailto:email_kamu@gmail.com">email_kamu@gmail.com</a></li>
+                <li>LinkedIn: <a href="link_linkedin_kamu" target="_blank">linkedin.com/in/namakamu</a></li>
+                <li>GitHub: <a href="link_github_kamu" target="_blank">github.com/namakamu</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Nama Kamu. Semua Hak Cipta Dilindungi.</p>
+        </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
