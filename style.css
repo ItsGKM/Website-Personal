@@ -1,149 +1,122 @@
-/* Menggunakan Tailwind CSS untuk utilitas */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Gaya Dasar */
+/* Styling Umum */
 body {
-    font-family: 'Inter', sans-serif;
-    color: #2d3748;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(135deg, #d8b4fe 0%, #f0abfc 25%, #fca5a5 50%, #fde68a 75%, #a7f3d0 100%);
-    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
+    max-width: 960px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /* Header & Navigasi */
-.header {
-    @apply py-6 border-b border-gray-200 sticky top-0 z-50 bg-white bg-opacity-90 backdrop-blur-sm;
+header {
+    background: #fff;
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: #eee 1px solid;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.nav {
-    @apply flex justify-between items-center;
+header h1 {
+    color: #333;
+    margin: 0;
+    float: left;
 }
 
-.logo {
-    @apply text-3xl font-bold text-gray-800;
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: right;
 }
 
-.nav-links {
-    @apply space-x-6 hidden md:flex;
+header nav li {
+    display: inline;
+    margin-left: 20px;
 }
 
-.nav-link {
-    @apply text-gray-600 hover:text-purple-600 transition duration-300 font-semibold;
+/* Bagian Tentang Saya */
+.about-section {
+    text-align: center;
+    padding: 50px 0;
 }
 
-.menu-btn {
-    @apply md:hidden text-gray-600 hover:text-purple-600 focus:outline-none;
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
 }
 
-.mobile-menu {
-    @apply md:hidden absolute w-full bg-white z-50 transition-all duration-300 ease-in-out transform -translate-y-full;
-}
-
-.mobile-nav-link {
-    @apply block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100;
-}
-
-/* Bagian Konten */
-.section {
-    @apply py-20;
-}
-
-.about-section, .projects-section, .skills-section, .contact-section {
-    @apply bg-white bg-opacity-80 rounded-2xl shadow-xl p-8 my-8 mx-auto max-w-7xl backdrop-blur-sm;
-}
-
-.section-title {
-    @apply text-4xl font-bold text-center mb-12;
-}
-
-/* Profil */
-.profile {
-    @apply flex flex-col items-center;
-}
-
-.profile-pic {
-    @apply rounded-full w-48 h-48 object-cover mb-4 ring-4 ring-purple-300 transform transition-all duration-500 hover:scale-105;
-}
-
-.name {
-    @apply text-4xl font-bold text-gray-800 mt-2 mb-2;
-}
-
-.title {
-    @apply text-xl text-gray-600;
-}
-
-.description {
-    @apply mt-8 max-w-2xl text-lg text-gray-700;
-}
-
-/* Kartu & Proyek */
-.projects-grid {
-    @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
-}
-
-.card {
-    @apply bg-white rounded-2xl p-6 shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-2xl;
-}
-
-.project-img {
-    @apply w-full h-48 object-cover rounded-xl mb-4;
-}
-
-.card-title {
-    @apply text-2xl font-semibold mb-2;
-}
-
-.card-description {
-    @apply text-gray-600 mb-4;
-}
-
-/* Tombol */
-.btn-primary {
-    @apply bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl;
-    display: inline-block;
+/* Bagian Proyek */
+.projects-section {
+    background: #ecf0f1;
+    padding: 50px 0;
     text-align: center;
 }
 
-/* Keahlian */
-.skills-grid {
-    @apply flex flex-wrap justify-center gap-4;
+.project-card {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: inline-block;
+    width: calc(50% - 40px);
+    margin: 10px;
+    box-sizing: border-box;
 }
 
-.skill-tag {
-    @apply rounded-full px-6 py-2 font-medium transition-all duration-300 transform hover:scale-110;
+/* Bagian Kontak */
+.contact-section {
+    text-align: center;
+    padding: 50px 0;
 }
 
-/* Kontak */
-.contact-sub {
-    @apply text-gray-600 mb-8;
-}
-
-.contact-info-grid {
-    @apply flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 text-lg mb-12;
-}
-
-.contact-item {
-    @apply flex items-center space-x-2;
-}
-
-.contact-link, .contact-text {
-    @apply text-gray-600 hover:text-purple-600 transition-colors;
-}
-
-.icon {
-    @apply text-purple-600 w-6 h-6 flex-shrink-0;
+.contact-section ul {
+    list-style: none;
+    padding: 0;
 }
 
 /* Footer */
-.footer {
-    @apply py-8 text-center text-gray-500 border-t border-gray-200 bg-white bg-opacity-80 backdrop-blur-sm;
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    header h1, header nav {
+        float: none;
+        text-align: center;
+    }
+    .project-card {
+        width: 100%;
+        display: block;
+    }
 }
