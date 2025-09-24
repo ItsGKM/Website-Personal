@@ -1,0 +1,149 @@
+/* Menggunakan Tailwind CSS untuk utilitas */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Gaya Dasar */
+body {
+    font-family: 'Inter', sans-serif;
+    color: #2d3748;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #d8b4fe 0%, #f0abfc 25%, #fca5a5 50%, #fde68a 75%, #a7f3d0 100%);
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header & Navigasi */
+.header {
+    @apply py-6 border-b border-gray-200 sticky top-0 z-50 bg-white bg-opacity-90 backdrop-blur-sm;
+}
+
+.nav {
+    @apply flex justify-between items-center;
+}
+
+.logo {
+    @apply text-3xl font-bold text-gray-800;
+}
+
+.nav-links {
+    @apply space-x-6 hidden md:flex;
+}
+
+.nav-link {
+    @apply text-gray-600 hover:text-purple-600 transition duration-300 font-semibold;
+}
+
+.menu-btn {
+    @apply md:hidden text-gray-600 hover:text-purple-600 focus:outline-none;
+}
+
+.mobile-menu {
+    @apply md:hidden absolute w-full bg-white z-50 transition-all duration-300 ease-in-out transform -translate-y-full;
+}
+
+.mobile-nav-link {
+    @apply block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100;
+}
+
+/* Bagian Konten */
+.section {
+    @apply py-20;
+}
+
+.about-section, .projects-section, .skills-section, .contact-section {
+    @apply bg-white bg-opacity-80 rounded-2xl shadow-xl p-8 my-8 mx-auto max-w-7xl backdrop-blur-sm;
+}
+
+.section-title {
+    @apply text-4xl font-bold text-center mb-12;
+}
+
+/* Profil */
+.profile {
+    @apply flex flex-col items-center;
+}
+
+.profile-pic {
+    @apply rounded-full w-48 h-48 object-cover mb-4 ring-4 ring-purple-300 transform transition-all duration-500 hover:scale-105;
+}
+
+.name {
+    @apply text-4xl font-bold text-gray-800 mt-2 mb-2;
+}
+
+.title {
+    @apply text-xl text-gray-600;
+}
+
+.description {
+    @apply mt-8 max-w-2xl text-lg text-gray-700;
+}
+
+/* Kartu & Proyek */
+.projects-grid {
+    @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.card {
+    @apply bg-white rounded-2xl p-6 shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-2xl;
+}
+
+.project-img {
+    @apply w-full h-48 object-cover rounded-xl mb-4;
+}
+
+.card-title {
+    @apply text-2xl font-semibold mb-2;
+}
+
+.card-description {
+    @apply text-gray-600 mb-4;
+}
+
+/* Tombol */
+.btn-primary {
+    @apply bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Keahlian */
+.skills-grid {
+    @apply flex flex-wrap justify-center gap-4;
+}
+
+.skill-tag {
+    @apply rounded-full px-6 py-2 font-medium transition-all duration-300 transform hover:scale-110;
+}
+
+/* Kontak */
+.contact-sub {
+    @apply text-gray-600 mb-8;
+}
+
+.contact-info-grid {
+    @apply flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 text-lg mb-12;
+}
+
+.contact-item {
+    @apply flex items-center space-x-2;
+}
+
+.contact-link, .contact-text {
+    @apply text-gray-600 hover:text-purple-600 transition-colors;
+}
+
+.icon {
+    @apply text-purple-600 w-6 h-6 flex-shrink-0;
+}
+
+/* Footer */
+.footer {
+    @apply py-8 text-center text-gray-500 border-t border-gray-200 bg-white bg-opacity-80 backdrop-blur-sm;
+}
